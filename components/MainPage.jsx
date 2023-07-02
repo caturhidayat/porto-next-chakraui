@@ -23,9 +23,11 @@ import {
     SiTypescript,
     SiPug,
     SiGnubash,
-    SiHtml5
+    SiHtml5,
+    SiChakraui
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export default function MainPage({ repos }) {
     // const [visibleItems, setVisibleItem]= useState(6)
@@ -63,54 +65,64 @@ export default function MainPage({ repos }) {
                                     Stack:
                                 </Text>
 
-                                {value.topics === "javascript" && (
+                                {value.language === "JavaScript" && (
                                     <HStack>
                                         <SiJavascript />
                                     </HStack>
                                 )}
-                                {value.topics === "TypeScript" && (
+                                {value.language === "TypeScript" && (
                                     <HStack>
                                         <SiTypescript />
                                     </HStack>
                                 )}
-                                {value.topics === "css" && (
+                                {value.language === "CSS" && (
                                     <HStack>
                                         <SiCss3 />
                                     </HStack>
                                 )}
-                                {value.topics === "pug" && (
+                                {value.language === "pug" && (
                                     <HStack>
                                         <SiPug />
                                     </HStack>
                                 )}
-                                {value.topics === "shell" && (
+                                {value.language === "shell" && (
                                     <HStack>
                                         <SiGnubash />
                                     </HStack>
                                 )}
-                                {value.topics === "python" && (
+                                {value.language === "Python" && (
                                     <HStack>
                                         <SiPython />
                                     </HStack>
                                 )}
-                                {value.topics === "html" && (
+                                {value.language === "html" && (
                                     <HStack>
                                         <SiHtml5 />
                                     </HStack>
                                 )}
-                                {value.topics === "handlebars" && (
+                                {value.language === "Handlebars" && (
                                     <HStack>
                                         <SiHandlebarsdotjs />
                                     </HStack>
                                 )}
-                                {value.language === "NextJS" && (
+                                {value.topics === "nextjs" && (
                                     <HStack>
                                         <TbBrandNextjs />
                                     </HStack>
                                 )}
-                                {value.language === "ExpressJS" && (
+                                {value.language === "expressjs" && (
                                     <HStack>
                                         <SiExpress />
+                                    </HStack>
+                                )}
+                                {value.language === "chakra-ui" && (
+                                    <HStack>
+                                        <SiChakraui />
+                                    </HStack>
+                                )}
+                                {value.language === "postgresql" && (
+                                    <HStack>
+                                        <BiLogoPostgresql />
                                     </HStack>
                                 )}
                                 {!value.language && (
