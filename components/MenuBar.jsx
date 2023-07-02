@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Heading, Flex, Text } from "@chakra-ui/layout";
 import Link from "next/link";
 
-export default function MenuBar({ menu }) {
+export default function MenuBar({ menu = [] }) {
     return (
         <Flex
             minWidth='max-content'

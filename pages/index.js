@@ -1,19 +1,19 @@
 import { Grid, GridItem, Text } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
 import MenuBar from "@/components/MenuBar";
-import MainPage from "@/components/MainPage";
+import TabsMenu from "@/components/TabsMenu";
 import Footer from "@/components/Footer";
-export default function Home({data, repos = []}) {
+export default function Home({ data, repos = [] }) {
     const menu = [
-        // {
-        //     name: "Home",
-        //     link: "/",
-        // },
+        {
+            name: "Home",
+            link: "/",
+        },
         // {
         //     name: "Dashboard",
         //     link: "/blogs",
         // }
-    ]
+    ];
     return (
         <>
             <Grid
@@ -27,18 +27,19 @@ export default function Home({data, repos = []}) {
                 color='blackAlpha.700'
                 fontWeight='bold'
             >
-                <GridItem pl='2' bg='gray.300' area={"header"} >
+                <GridItem pl='2' bg='gray.300' area={"header"}>
                     <MenuBar menu={menu} />
                 </GridItem>
-                <GridItem pl='5'  area={"nav"}>
-                    <Navbar profile={data}/>
+                <GridItem pl='5' area={"nav"}>
+                    <Navbar profile={data} />
                 </GridItem>
                 <GridItem maxW='container.lg' mx='auto' px='5' area={"main"}>
                     <Text fontSize='2xl'>Repo :</Text>
-                    <MainPage repos={repos}/>
+                    {/* <MainPage repos={repos}/> */}
+                    <TabsMenu repos={repos} />
                 </GridItem>
-                <GridItem pl='5' bg='gray.100' area={"footer"} >
-                    <Footer menu={menu}/>
+                <GridItem pl='5' bg='gray.100' area={"footer"}>
+                    <Footer menu={menu} />
                 </GridItem>
             </Grid>
         </>
@@ -48,12 +49,14 @@ export default function Home({data, repos = []}) {
 export const getServerSideProps = async () => {
     const res = await fetch("https://api.github.com/users/caturhidayat");
     const data = await res.json();
-    const resRepo = await fetch("https://api.github.com/users/caturhidayat/repos");
+    const resRepo = await fetch(
+        "https://api.github.com/users/caturhidayat/repos"
+    );
     const repos = await resRepo.json();
     return {
         props: {
             data,
-            repos
+            repos,
         },
     };
-}
+};
