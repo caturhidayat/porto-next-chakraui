@@ -34,7 +34,7 @@ export default function Certificate({ cert = [] }) {
                     px='2'
                 >
                     <CardHeader>
-                        <Heading size='md' mb='4' color='telegram.700'>
+                        <Heading size='md' color='telegram.700'>
                             {value.name}
                         </Heading>
                     </CardHeader>
@@ -45,18 +45,16 @@ export default function Certificate({ cert = [] }) {
                             borderRadius='lg'
                             mx={{ base: "0", md: "auto" }}
                         />
-                        <Divider colorScheme='purple' size='2px' />
                         <Text fontWeight='normal' fontSize='sm' mt='2'>
                             {value.description}
                         </Text>
-                    </CardBody>
-                    <CardFooter>
+                        <Divider colorScheme='telegram' size='2px' my='4' />
                         <Tag variant='outline' colorScheme='telegram'>
                             <Link href={value.link} target='_blank'>
                                 View here
                             </Link>
                         </Tag>
-                    </CardFooter>
+                    </CardBody>
                 </Card>
             ))}
         </SimpleGrid>
