@@ -18,8 +18,8 @@ export default function Footer({ menu }) {
                         Backend engineer
                     </Text>
                     <Text fontWeight='light' fontSize='xs' color='gray.800'>
-                        <Link href='mailto:catur@windowslive.com'>
-                            catur@windowslive.com
+                        <Link href='mailto:caturhidayat00@gmail.com'>
+                            caturhidayat00@gmail.com
                         </Link>
                     </Text>
                 </Stack>
