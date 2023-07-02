@@ -12,18 +12,17 @@ import React from "react";
 import { FaNodeJs } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiPrisma, SiChakraui, SiExpress } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export default function Navbar({ profile = [] }) {
-    // return data.name
-    console.log({ profile });
     return (
         <Card maxW='sm'>
-            <CardBody my='4'>
-                <Stack >
+            <CardBody my='10'>
+                <Stack>
                     <Image
-                        boxSize={{ base: "80px", md: "250px" }}
+                        boxSize={{ base: "80px", md: "220px" }}
                         src={profile.avatar_url}
-                        alt='Green double couch with wooden legs'
+                        alt='Github Avatar'
                         borderRadius='lg'
                         mx={{ base: "0", md: "auto" }}
                     />
@@ -32,14 +31,19 @@ export default function Navbar({ profile = [] }) {
                     <Heading size='lg' color='blackAlpha.800'>
                         Who I am
                     </Heading>
-                    {/* <Text fontSize='xs' color='gray.700'>
-                        Full Stack Web Developer
-                    </Text> */}
-                    <Text fontWeight='light' fontSize='lg'>Hi, I am <Text as='b'>{profile.name}</Text> - {profile.bio}</Text>
+                    <Text fontWeight='light' fontSize='lg'>
+                        Hi, I am{" "}
+                        <Text as='b' color='purple.700'>
+                            {profile.name}
+                        </Text>
+                    </Text>
+                    <Text fontWeight='light' fontSize='lg'>
+                        {profile.bio}
+                    </Text>
                     <Text fontSize='xl' color='blackAlpha.800'>
                         Stack That I Use:
                     </Text>
-                    
+
                     <Text>
                         <Tag
                             mt='2'
@@ -56,7 +60,16 @@ export default function Navbar({ profile = [] }) {
                         </Tag>
                         <Tag mt='2' ml='2' colorScheme='gray' variant='outline'>
                             <TbBrandNextjs />
-                            <TagLabel>NextJS</TagLabel>
+                            <TagLabel pl='2'>NextJS</TagLabel>
+                        </Tag>
+                        <Tag
+                            mt='2'
+                            ml='2'
+                            colorScheme='telegram'
+                            variant='outline'
+                        >
+                            <BiLogoPostgresql />
+                            <TagLabel pl='2'>PgSQL</TagLabel>
                         </Tag>
                         <Tag
                             mt='2'
@@ -74,7 +87,6 @@ export default function Navbar({ profile = [] }) {
                     </Text>
                 </Stack>
             </CardBody>
-            
         </Card>
     );
 }

@@ -1,11 +1,17 @@
-import React from 'react'
-import { Box, Heading, Flex, Spacer, Text } from "@chakra-ui/layout";
-import { Button, ButtonGroup } from "@chakra-ui/button";
+import React from "react";
+import { Box, Heading, Flex, Text } from "@chakra-ui/layout";
 import Link from "next/link";
 
 export default function MenuBar({ menu }) {
-  return (
-    <Flex minWidth='max-content' alignItems='center' gap='2' mx='3' color='blackAlpha.800'>
+    return (
+        <Flex
+            minWidth='max-content'
+            alignItems='center'
+            height='80px'
+            gap='2'
+            mx='3'
+            color='blackAlpha.800'
+        >
             <Box p='2'>
                 <Heading fontSize='2xl' size='md'>
                     <Link href='/'>Catur Hidayat</Link>
@@ -19,5 +25,5 @@ export default function MenuBar({ menu }) {
                 </Box>
             ))}
         </Flex>
-  )
+    );
 }
