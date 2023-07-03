@@ -81,7 +81,7 @@ const cert = [
 export default function TabsMenu({ repos = [] }) {
     return (
         <div>
-            <Tabs variant='enclosed'>
+            <Tabs variant='enclosed' isLazy={true} color='telegram.700'>
                 <TabList>
                     <Tab>Repo:</Tab>
                     <Tab>Certificate:</Tab>

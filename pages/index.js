@@ -1,6 +1,6 @@
 import { Grid, GridItem, Text } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
-import MenuBar from "@/components/MenuBar";
+import Headers from "@/components/Headers";
 import TabsMenu from "@/components/TabsMenu";
 import Footer from "@/components/Footer";
 export default function Home({ data, repos = [] }) {
@@ -27,18 +27,18 @@ export default function Home({ data, repos = [] }) {
                 color='blackAlpha.700'
                 fontWeight='bold'
             >
-                <GridItem pl='2' bg='gray.300' area={"header"}>
-                    <MenuBar menu={menu} />
+                <GridItem pl='2'  borderBottom='2px' boxShadow='base' borderColor='teal.200' area={"header"}>
+                    <Headers menu={menu} />
                 </GridItem>
                 <GridItem pl='5' area={"nav"}>
                     <Navbar profile={data} />
                 </GridItem>
                 <GridItem maxW='container.lg' mx='auto' px='5' area={"main"}>
-                    <Text fontSize='2xl'>Repo :</Text>
+                    {/* <Text fontSize='2xl'>Repo :</Text> */}
                     {/* <MainPage repos={repos}/> */}
                     <TabsMenu repos={repos} />
                 </GridItem>
-                <GridItem pl='5' bg='gray.100' area={"footer"}>
+                <GridItem pl='5' borderTop='2px' borderColor='telegram.800' bg='telegram.200' area={"footer"}>
                     <Footer menu={menu} />
                 </GridItem>
             </Grid>

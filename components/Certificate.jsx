@@ -15,6 +15,7 @@ import {
     Image,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { ImNewTab } from "react-icons/im";
 // import Image from "next/image";
 
 export default function Certificate({ cert = [] }) {
@@ -30,7 +31,6 @@ export default function Certificate({ cert = [] }) {
                     boxShadow='lg'
                     borderWidth='1px'
                     borderColor='telegram.200'
-                    bg='telegram.90'
                     px='2'
                 >
                     <CardHeader>
@@ -43,17 +43,20 @@ export default function Certificate({ cert = [] }) {
                             src={value.image}
                             alt='Certificate'
                             borderRadius='lg'
+                            bg='white'
                             mx={{ base: "0", md: "auto" }}
                         />
                         <Text fontWeight='normal' fontSize='sm' mt='2'>
                             {value.description}
                         </Text>
                         <Divider colorScheme='telegram' size='2px' my='4' />
-                        <Tag variant='outline' colorScheme='telegram'>
-                            <Link href={value.link} target='_blank'>
-                                View here
-                            </Link>
-                        </Tag>
+
+                        <Link href={value.link} target='_blank'>
+                            <Tag variant='outline' colorScheme='telegram'>
+                                View here 
+                                <ImNewTab />
+                            </Tag>
+                        </Link>
                     </CardBody>
                 </Card>
             ))}

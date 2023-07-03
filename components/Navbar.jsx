@@ -7,6 +7,7 @@ import {
     Image,
     Tag,
     TagLabel,
+    Divider,
 } from "@chakra-ui/react";
 import React from "react";
 import { FaNodeJs } from "react-icons/fa";
@@ -28,20 +29,21 @@ export default function Navbar({ profile = [] }) {
                     />
                 </Stack>
                 <Stack mt='6' spacing='3'>
-                    <Heading size='lg' color='blackAlpha.800'>
+                    <Heading size='lg' color='telegram.700'>
                         Who I am
                     </Heading>
-                    <Text fontWeight='light' fontSize='lg'>
+                    <Text fontWeight='normal' fontSize='lg'>
                         Hi, I am{" "}
-                        <Text as='b' color='purple.700'>
+                        <Text as='b' color='telegram.700'>
                             {profile.name}
                         </Text>
                     </Text>
-                    <Text fontWeight='light' fontSize='lg'>
+                    <Text fontWeight='normal' fontSize='lg'>
                         {profile.bio}
                     </Text>
-                    <Text fontSize='xl' color='blackAlpha.800'>
-                        Stack That I Use:
+                    <Divider />
+                    <Text fontSize='lg' fontWeight='semibold' color='blackAlpha'>
+                        I am most experienced:
                     </Text>
 
                     <Text>

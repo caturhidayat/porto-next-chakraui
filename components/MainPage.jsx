@@ -24,10 +24,11 @@ import {
     SiPug,
     SiGnubash,
     SiHtml5,
-    SiChakraui
+    SiChakraui,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { ImNewTab } from "react-icons/im";
 
 export default function MainPage({ repos }) {
     // const [visibleItems, setVisibleItem]= useState(6)
@@ -48,12 +49,13 @@ export default function MainPage({ repos }) {
                     boxShadow='lg'
                     borderWidth='1px'
                     borderColor='purple.200'
-                    bg='purple.40'
                     px='2'
                 >
                     <CardBody>
-                        <Heading size='md' mb='4' color='purple.700'>{value.name}</Heading>
-                        <Divider colorScheme="purple" size='2px' />
+                        <Heading size='md' mb='4' color='purple.700'>
+                            {value.name}
+                        </Heading>
+                        <Divider colorScheme='purple' size='2px' />
                         <Text fontWeight='normal' fontSize='sm' mt='2'>
                             {value.description}
                         </Text>
@@ -144,6 +146,7 @@ export default function MainPage({ repos }) {
                                         // justifyContent='end'
                                     >
                                         View here
+                                        <ImNewTab />
                                     </Tag>
                                 </Link>
                             </HStack>
