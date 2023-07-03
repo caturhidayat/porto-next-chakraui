@@ -17,7 +17,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 
 export default function Navbar({ profile = [] }) {
     return (
-        <Card maxW='sm'>
+        <Card maxW='sm' mt='95px' ml='40px'>
             <CardBody my='10'>
                 <Stack>
                     <Image

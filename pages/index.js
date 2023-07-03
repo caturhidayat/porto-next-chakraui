@@ -21,7 +21,7 @@ export default function Home({ data, repos = [] }) {
                   "nav main"
                   "footer footer"`}
                 gridTemplateRows={"80px 1fr 220px"}
-                gridTemplateColumns={"400px 1fr"}
+                gridTemplateColumns={"450px 1fr"}
                 h='200px'
                 gap='4'
                 color='blackAlpha.700'
