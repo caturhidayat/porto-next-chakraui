@@ -68,14 +68,14 @@ const cert = [
         image: "/logo/codecademy.png",
         link: "https://www.codecademy.com/profiles/BR0KY/certificates/3a62023b0054dc793edc0adecd715fd7",
     },
-    {
-        id: 9,
-        name: "Learn TypeScript Course",
-        description:
-            "Learn TypeScript, a superset of JavaScript that brings static types and powerful tooling to JavaScript development.",
-        image: "/logo/codecademy.png",
-        link: "https://www.codecademy.com/profiles/BR0KY/certificates/56fb1e71303e37b643bb1905f31c8a09",
-    },
+    // {
+    //     id: 9,
+    //     name: "Learn TypeScript Course",
+    //     description:
+    //         "Learn TypeScript, a superset of JavaScript that brings static types and powerful tooling to JavaScript development.",
+    //     image: "/logo/codecademy.png",
+    //     link: "https://www.codecademy.com/profiles/BR0KY/certificates/56fb1e71303e37b643bb1905f31c8a09",
+    // },
 ];
 
 export default function TabsMenu({ repos = [] }) {
