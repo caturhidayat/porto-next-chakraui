@@ -12,22 +12,22 @@ const cert = [
         image: "/logo/codecademy.png",
         link: "https://www.codecademy.com/profiles/BR0KY/certificates/705dcb15de0da4dd9d9fc4f3274b430e",
     },
-    {
-        id: 2,
-        name: "Learn CSS Course",
-        description:
-            "Learn how to use CSS — the presentational language that styles web pages and user interfaces.",
-        image: "/logo/codecademy.png",
-        link: "https://www.codecademy.com/profiles/BR0KY/certificates/9a5bb1fc45b4281af1fffec93b0aaf05",
-    },
-    {
-        id: 3,
-        name: "Learn HTML Course",
-        description:
-            "Learn how to use HTML and CSS to make webpages. HTML is the markup language that you surround content with, to tell browsers about headings, lists, tables, etc. CSS is the stylesheet language that you style the page with, to tell browsers to change the color, font, layout, and more.",
-        image: "/logo/codecademy.png",
-        link: "https://www.codecademy.com/profiles/BR0KY/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7",
-    },
+    // {
+    //     id: 2,
+    //     name: "Learn CSS Course",
+    //     description:
+    //         "Learn how to use CSS — the presentational language that styles web pages and user interfaces.",
+    //     image: "/logo/codecademy.png",
+    //     link: "https://www.codecademy.com/profiles/BR0KY/certificates/9a5bb1fc45b4281af1fffec93b0aaf05",
+    // },
+    // {
+    //     id: 3,
+    //     name: "Learn HTML Course",
+    //     description:
+    //         "Learn how to use HTML and CSS to make webpages. HTML is the markup language that you surround content with, to tell browsers about headings, lists, tables, etc. CSS is the stylesheet language that you style the page with, to tell browsers to change the color, font, layout, and more.",
+    //     image: "/logo/codecademy.png",
+    //     link: "https://www.codecademy.com/profiles/BR0KY/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7",
+    // },
     {
         id: 4,
         name: "Learn NodeJS Course",
