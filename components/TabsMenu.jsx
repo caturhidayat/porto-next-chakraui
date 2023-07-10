@@ -85,7 +85,7 @@ export default function TabsMenu({ repos = [] }) {
                 <TabList>
                     <Tab>Repo:</Tab>
                     <Tab>Certificate:</Tab>
-                    <Tab>Educations:</Tab>
+                    {/* <Tab>Educations:</Tab> */}
                 </TabList>
 
                 <TabPanels>
@@ -95,9 +95,9 @@ export default function TabsMenu({ repos = [] }) {
                     <TabPanel>
                         <Certificate cert={cert} />
                     </TabPanel>
-                    <TabPanel>
+                    {/* <TabPanel>
                         <Certificate cert={cert} />
-                    </TabPanel>
+                    </TabPanel> */}
                 </TabPanels>
             </Tabs>
         </div>
